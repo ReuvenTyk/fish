@@ -17,6 +17,7 @@ function press() {
   }
   if (counter >= 100) {
     alert("You Won");
+    clearInterval(intervalID);
   }
   progressBar(counter);
 }
@@ -40,8 +41,6 @@ function timerGo() {
   setTimeout("timerGo()", 1000);
 }
 
-timerGo();
-/* 
 function randomFunction() {
   let time = Math.random() * 10000;
   console.log(time);
@@ -51,11 +50,8 @@ function randomFunction() {
   return 4000;
 }
 
-function delay() {
-  timerGo();
+function start() {
+  intervalID = setInterval(timerGo, 4000);
 }
 
-function start() {
-  intervalID = setInterval(delay, randomFunction());
-}
- */
+start();
