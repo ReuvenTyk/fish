@@ -4,14 +4,16 @@ let sec = 0;
 const timer = document.getElementById("timer"),
   userBtn = document.getElementById("user-btn"),
   bar = document.getElementById("bar");
+let counter = 0;
 
 userBtn.addEventListener("click", up);
 
-timerGo();
+while (counter < 100) {
+  timerGo();
+}
 
 function up() {
   check();
-  let counter = 0;
 }
 
 function timerGo() {
